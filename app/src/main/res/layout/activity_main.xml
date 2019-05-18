@@ -6,13 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="304dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="262dp"
+        android:onClick="openUnitsActivity"
+        android:text="IMIE NAZWISKO TYPA 4"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="304dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="openUnitsActivity"
+        android:text="IMIE NAZWISKO TYPA 3"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="304dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="openUnitsActivity"
+        android:text="IMIE NAZWISKO TYPA 1"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="304dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="openUnitsActivity"
+        android:text="IMIE NAZWISKO TYPA 2"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button_student"
+        android:layout_width="402dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="16dp"
+        android:text="PANEL ADMINISTRATORA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
 </android.support.constraint.ConstraintLayout>
