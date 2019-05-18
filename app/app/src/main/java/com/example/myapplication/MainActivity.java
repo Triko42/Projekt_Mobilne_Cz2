@@ -1,6 +1,5 @@
-package com.example.projekt_mobilne_cz2;
+package com.example.myapplication;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,8 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-
-import com.example.myapplication.R;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>, View.OnClickListener {
 
@@ -32,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
                 setContentView(R.layout.przedmiot);
-
             }
         });
 
@@ -98,7 +94,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
 
     private void populateListView(){
-
+/*
+        dbStudent = new STUstudent(this);
+        dbStudent.open();
+        Cursor cursor=dbStudent.getStudent();
+        String[] fromFieldNames=new String[]{STUhelper.STU_ID, STUhelper.STU_IMIE, STUhelper.STU_NAZWISKO};
+        int[] toView=new int[]{R.id.IDstu, R.id.IMIEstu, R.id.NAZWstu};
+        SimpleCursorAdapter myCursorAdapter;
+        myCursorAdapter=new SimpleCursorAdapter((getBaseContext()),R.layout.studenci,cursor,fromFieldNames,toView,0);
+        ListView myList=findViewById(R.id.lista1);
+        myList.setAdapter(myCursorAdapter);
+*/
         findViewById(R.id.button_add).setOnClickListener(this);
         findViewById(R.id.button_delete).setOnClickListener(this);
         scAdapter=new SimpleCursorAdapter(

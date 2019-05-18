@@ -1,4 +1,4 @@
-package com.example.projekt_mobilne_cz2;
+package com.example.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
