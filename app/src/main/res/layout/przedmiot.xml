@@ -9,7 +9,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Działa"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="179dp" />
+        android:text="Lista studentów checkbox, zliczanie obecnosci"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="164dp" />
 </android.support.constraint.ConstraintLayout>
