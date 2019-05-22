@@ -22,7 +22,6 @@ public class TestFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         Button button_changelist = view.findViewById(R.id.button1);
         button_changelist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,7 +29,14 @@ public class TestFragment extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 if (fragmentManager!=null) {
                     Toast.makeText(getContext(), "KLIKŁEM3", Toast.LENGTH_SHORT).show();
-                    Nawigator.navigateTo(fragmentManager, new TestFragment3());
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("key","Programowanie w języku Java");
+
+                    TestFragment3 testFragment3 = new TestFragment3();
+                    testFragment3.setArguments(bundle);
+
+                    Nawigator.navigateTo(fragmentManager, testFragment3);
                 }
 
             }
