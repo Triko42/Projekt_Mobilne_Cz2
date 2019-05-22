@@ -7,7 +7,6 @@
     android:orientation="horizontal"
     android:layout_height="wrap_content">
 
-
     <EditText
         android:id="@+id/editText_imie"
         android:layout_width="wrap_content"
@@ -18,7 +17,7 @@
         android:layout_marginBottom="15dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Podaj imie studenta"
+        android:hint="Podaj imie studenta"
         app:layout_constraintBottom_toTopOf="@+id/editText_nazwisko"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +33,7 @@
         android:layout_marginBottom="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Podaj nazwisko studenta"
+        android:hint="Podaj nazwisko studenta"
         app:layout_constraintBottom_toTopOf="@+id/button_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
