@@ -8,14 +8,18 @@
 
     <Button
         android:id="@+id/buttonMarks1"
-        android:layout_width="175dp"
-        android:layout_height="72dp"
+        android:layout_width="182dp"
+        android:layout_height="74dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/button_style"
         android:text="Oceny"
+        android:textColor="#FFFF"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonPresence1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -24,26 +28,32 @@
         android:layout_height="74dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="308dp"
-        android:text="Obecności"
+        android:layout_marginBottom="292dp"
+        android:background="@drawable/button_style"
+        android:text="OBECNOSCI"
+        android:textColor="#FFFF"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/subject"
-        android:layout_width="152dp"
+        android:layout_width="279dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textDirection="locale"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonMarks1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.65"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintVertical_bias="0.533" />
 </android.support.constraint.ConstraintLayout>

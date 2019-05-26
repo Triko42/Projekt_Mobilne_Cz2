@@ -33,6 +33,7 @@ public class TestFragment extends Fragment {
                     Bundle bundle = new Bundle();
                     bundle.putString("key","Java");
 
+
                     TestFragment3 testFragment3 = new TestFragment3();
                     testFragment3.setArguments(bundle);
 
