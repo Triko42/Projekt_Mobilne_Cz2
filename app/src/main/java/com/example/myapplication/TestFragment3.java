@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +29,7 @@ public class TestFragment3 extends Fragment {
         final String sub = bundle.getString("key");
         subject.setText(sub);
 
+        /*
         Button button_changelist = view.findViewById(R.id.buttonMarks1);
         button_changelist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,14 +42,15 @@ public class TestFragment3 extends Fragment {
 
                     bundle1.putString("key", sub);
 
-                    Marks marks = new Marks();
-                    marks.setArguments(bundle1);
+                    EditMarks editMarks = new EditMarks();
+                    editMarks.setArguments(bundle1);
 
-                    Nawigator.navigateTo(fragmentManager, marks);
+                    Nawigator.navigateTo(fragmentManager, editMarks);
                 }
             }
 
         });
+        */
 
         Button button_changelist2 = view.findViewById(R.id.buttonPresence1);
         button_changelist2.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +68,27 @@ public class TestFragment3 extends Fragment {
                     presistance.setArguments(bundle1);
 
                     Nawigator.navigateTo(fragmentManager, presistance);
+                }
+            }
+
+        });
+
+        Button button_changelist3 = view.findViewById(R.id.buttonMarks1);
+        button_changelist3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                if (fragmentManager!=null) {
+                    Toast.makeText(getContext(), "KLIKŁEM6", Toast.LENGTH_SHORT).show();
+
+                    Bundle bundle1 = new Bundle();
+
+                    bundle1.putString("key", sub);
+
+                    Marks marks = new Marks();
+                    marks.setArguments(bundle1);
+
+                    Nawigator.navigateTo(fragmentManager, marks);
                 }
             }
 

@@ -10,20 +10,24 @@ public class STUstudent {
 
     STUhelper dbHelper;
     PREhelper preHelper;
+    MARhelper marHelper;
     SQLiteDatabase dbStudent;
 
     private String Student_RECORS[];
     private String Presistance_RECORS[];
+    private String Mark_RECORS[];
 
     public STUstudent(Context context) {
         dbHelper = new STUhelper(context);
         preHelper = new PREhelper(context);
+        marHelper=new MARhelper(context);
     }
 
     public void open() throws SQLException {
         dbStudent = dbHelper.getWritableDatabase();
         preHelper.onCreate(dbStudent);
         dbHelper.onCreate(dbStudent);
+        marHelper.onCreate(dbStudent);
     }
 
     public void close() {
@@ -104,4 +108,49 @@ public class STUstudent {
         return dbStudent.delete(PREhelper.TABLE_TYP, PREhelper.PRE_STU_ID + "=?", new String[]{id}) > 0;
     }
 
+
+
+    public boolean addMark(long stud_id, String sub, String name, String surname) {
+        ContentValues cv = new ContentValues();
+        cv.put(MARhelper.MAR_STU_ID, stud_id);
+        cv.put(MARhelper.MAR_IM, name);
+        cv.put(MARhelper.MAR_NAZW, surname);
+        cv.put(MARhelper.MAR_SUBJECT, sub);
+        cv.put(MARhelper.MAR_K1, "Kol1");
+        cv.put(MARhelper.MAR_K2, "Kol2");
+        cv.put(MARhelper.MAR_EGZ, "EGZ");
+        return dbStudent.insert(MARhelper.TABLE_TYP, null, cv) != -1;
+    }
+
+    public Cursor getAllMark() {
+        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, null, null, null, null, null);
+    }
+    public Cursor getMarkForSubject(String subject) {
+        String[] whereArgs = new String[] {
+                subject,
+        };
+        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_NAZW + " = ?", whereArgs, null, null, null);
+
+    }
+    public Cursor getMarksById(long id) {
+        String[] whereArgs = new String[] {
+                String.valueOf(id),
+        };
+        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_ID + " = ?", whereArgs, null, null, null);
+    }
+
+
+    public int updateMark(long id, String[] args){
+        ContentValues cv = new ContentValues();
+        cv.put("o1",args[0]);
+        cv.put("o2",args[1]);
+        cv.put("o3",args[2]);
+
+        return dbStudent.update(MARhelper.TABLE_TYP, cv, "_id="+id, null);
+    }
+
+
+    public boolean deleteMark(String id) {
+        return dbStudent.delete(MARhelper.TABLE_TYP, MARhelper.MAR_STU_ID + "=?", new String[]{id}) > 0;
+    }
 }

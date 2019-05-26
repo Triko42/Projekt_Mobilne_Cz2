@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.Cursor;
 import android.support.v4.content.CursorLoader;
 
+import com.example.myapplication.STUstudent;
+
 public class PRELoader extends CursorLoader {
 
     STUstudent dbase;

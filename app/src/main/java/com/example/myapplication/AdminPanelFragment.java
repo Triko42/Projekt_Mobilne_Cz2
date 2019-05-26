@@ -72,6 +72,7 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
 
             if (stud_id != -1) {
                 dbStudent.addPresRec(stud_id, "Java",imie.trim(),nazwisko.trim());
+                dbStudent.addMark(stud_id, "Java",imie.trim(),nazwisko.trim());
 
                 clearEditTexts();
                 showSuccessMessage();
