@@ -38,10 +38,10 @@ public class STUstudent {
     }
 
     public Cursor getStudent() {
-        ContentValues cv = new ContentValues();
-        cv.put(STUhelper.STU_IMIE, "sads");
-        cv.put(STUhelper.STU_NAZWISKO, "asdad");
-        dbStudent.insert(STUhelper.TABLE_TYP, null, cv);
+        //ContentValues cv = new ContentValues();
+       // cv.put(STUhelper.STU_IMIE, "sads");
+        //cv.put(STUhelper.STU_NAZWISKO, "asdad");
+       // dbStudent.insert(STUhelper.TABLE_TYP, null, cv);
         return dbStudent.query(STUhelper.TABLE_TYP, Student_RECORS, null, null, null, null, STUhelper.STU_NAZWISKO + " ASC");
     }
     public Cursor getStudentForSubject(String subject) {
@@ -52,6 +52,7 @@ public class STUstudent {
     }
 
     public boolean deleteStudent(String id) {
+
         return dbStudent.delete(STUhelper.TABLE_TYP, STUhelper.STU_ID + "=?", new String[]{id}) > 0;
     }
 
@@ -100,7 +101,7 @@ public class STUstudent {
     }
 
     public boolean deletePr(String id) {
-        return dbStudent.delete(PREhelper.TABLE_TYP, PREhelper.PRE_ID + "=?", new String[]{id}) > 0;
+        return dbStudent.delete(PREhelper.TABLE_TYP, PREhelper.PRE_STU_ID + "=?", new String[]{id}) > 0;
     }
 
 }

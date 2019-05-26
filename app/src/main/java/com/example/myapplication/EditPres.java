@@ -91,6 +91,7 @@ public class EditPres extends Fragment implements LoaderManager.LoaderCallbacks<
                         ob5,
                         ob6,
                 };
+
         dbStudent.updatePres(this.id, args);
 
         Bundle bundle1 = new Bundle();
@@ -102,11 +103,12 @@ public class EditPres extends Fragment implements LoaderManager.LoaderCallbacks<
         edit.setArguments(bundle1);
         dbStudent.close();
         Nawigator.navigateTo(fragmentManager, edit);
+        //refreshList();
     }
 
-    private void refreshList() {
-        getLoaderManager().getLoader(2).forceLoad();
-    }
+   // private void refreshList() {
+   //     getLoaderManager().getLoader(2).forceLoad();
+  // }
     @NonNull
     @Override
     public Loader<Cursor> onCreateLoader(int i, @Nullable Bundle bundle) {
