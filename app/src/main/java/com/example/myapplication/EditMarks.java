@@ -27,13 +27,12 @@ public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.marks, container, false);
+        return inflater.inflate(R.layout.editmark, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         Bundle bundle = this.getArguments();
 
         dbStudent = new STUstudent(view.getContext());
@@ -49,9 +48,9 @@ public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks
         Cursor cursor = dbStudent.getMarksById(id);
         cursor.moveToFirst();
 
-        String em1 = cursor.getString(cursor.getColumnIndex("m1"));
-        String em2 = cursor.getString(cursor.getColumnIndex("m2"));
-        String em3 = cursor.getString(cursor.getColumnIndex("m3"));
+        String em1 = cursor.getString(cursor.getColumnIndex("k1"));
+        String em2 = cursor.getString(cursor.getColumnIndex("k2"));
+        String em3 = cursor.getString(cursor.getColumnIndex("egz"));
 
         m1.setText(em1);
         m2.setText(em2);
@@ -60,7 +59,7 @@ public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks
         //TextView subject = view.findViewById(R.id.subject2);
        // subject.setText(bundle.getString("key"));
 
-        Button button = view.findViewById(R.id.saveprebtn);
+        Button button = view.findViewById(R.id.savemark1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,7 +78,6 @@ public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks
                 em1,
                 em2,
                 em3,
-
         };
 
         dbStudent.updateMark(this.id, args);
@@ -89,10 +87,10 @@ public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks
         bundle1.putString("key", subject);
         FragmentManager fragmentManager = getFragmentManager();
 
-        EditMarks edit2 = new EditMarks();
-        edit2.setArguments(bundle1);
+        Marks edit = new Marks();
+        edit.setArguments(bundle1);
         dbStudent.close();
-        Nawigator.navigateTo(fragmentManager, edit2);
+        Nawigator.navigateTo(fragmentManager, edit);
     }
 
     @NonNull

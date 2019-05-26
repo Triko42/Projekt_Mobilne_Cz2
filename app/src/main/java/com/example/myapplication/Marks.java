@@ -20,7 +20,7 @@ public class Marks extends Fragment implements LoaderManager.LoaderCallbacks<Cur
 
 
     private ListView markListView;
-    private SimpleCursorAdapter prAdapter;
+    private SimpleCursorAdapter maAdapter;
     private STUstudent dbStudent;
     private String subject;
 
@@ -49,7 +49,7 @@ public class Marks extends Fragment implements LoaderManager.LoaderCallbacks<Cur
         dbStudent = new STUstudent(view.getContext());
         dbStudent.open();
 
-        prAdapter = new SimpleCursorAdapter(
+        maAdapter = new SimpleCursorAdapter(
                 view.getContext(), R.layout.mark_list, null,
                 new String[]{
                         MARhelper.MAR_IM,
@@ -65,7 +65,7 @@ public class Marks extends Fragment implements LoaderManager.LoaderCallbacks<Cur
                         R.id.oce2,
                         R.id.oce3,
                 }, 0);
-        markListView.setAdapter(prAdapter);
+        markListView.setAdapter(maAdapter);
         getLoaderManager().initLoader(2, null, this);
 
 
@@ -102,11 +102,11 @@ public class Marks extends Fragment implements LoaderManager.LoaderCallbacks<Cur
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        prAdapter.swapCursor(data);
+        maAdapter.swapCursor(data);
     }
 
     @Override
     public void onLoaderReset(@NonNull Loader<Cursor> loader) {
-        prAdapter.swapCursor(null);
+        maAdapter.swapCursor(null);
     }
 }

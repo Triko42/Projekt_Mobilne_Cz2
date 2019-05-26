@@ -116,9 +116,9 @@ public class STUstudent {
         cv.put(MARhelper.MAR_IM, name);
         cv.put(MARhelper.MAR_NAZW, surname);
         cv.put(MARhelper.MAR_SUBJECT, sub);
-        cv.put(MARhelper.MAR_K1, "Kol1");
-        cv.put(MARhelper.MAR_K2, "Kol2");
-        cv.put(MARhelper.MAR_EGZ, "EGZ");
+        cv.put(MARhelper.MAR_K1, "0");
+        cv.put(MARhelper.MAR_K2, "0");
+        cv.put(MARhelper.MAR_EGZ,"0");
         return dbStudent.insert(MARhelper.TABLE_TYP, null, cv) != -1;
     }
 
@@ -129,7 +129,7 @@ public class STUstudent {
         String[] whereArgs = new String[] {
                 subject,
         };
-        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_NAZW + " = ?", whereArgs, null, null, null);
+        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_SUBJECT + " = ?", whereArgs, null, null, null);
 
     }
     public Cursor getMarksById(long id) {
@@ -140,11 +140,12 @@ public class STUstudent {
     }
 
 
+
     public int updateMark(long id, String[] args){
         ContentValues cv = new ContentValues();
-        cv.put("o1",args[0]);
-        cv.put("o2",args[1]);
-        cv.put("o3",args[2]);
+        cv.put("k1",args[0]);
+        cv.put("k2",args[1]);
+        cv.put("egz",args[2]);
 
         return dbStudent.update(MARhelper.TABLE_TYP, cv, "_id="+id, null);
     }

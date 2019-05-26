@@ -8,17 +8,17 @@
 
     <TextView
         android:id="@+id/oce3"
-        android:layout_width="27dp"
+        android:layout_width="50dp"
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="89dp"
+        android:layout_marginEnd="48dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/oce2"
-        android:layout_width="27dp"
+        android:layout_width="50dp"
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="38dp"
@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/oce1"
-        android:layout_width="27dp"
+        android:layout_width="50dp"
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="38dp"

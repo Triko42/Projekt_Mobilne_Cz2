@@ -22,86 +22,86 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.66" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="134dp"
         android:layout_height="48dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="20dp"
         android:text="EGZAMIN"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emark3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="452dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/emark3"
-        android:layout_width="40dp"
+        android:layout_width="70dp"
         android:layout_height="44dp"
         android:layout_marginStart="168dp"
-        android:layout_marginTop="556dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="168dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/eob2"
+        android:hint="ocena"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
         android:id="@+id/emark2"
-        android:layout_width="40dp"
+        android:layout_width="70dp"
         android:layout_height="44dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="360dp"
-        android:layout_marginEnd="11516dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="59dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/eob2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="ocena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/emark1"
-        android:layout_width="40dp"
+        android:layout_width="70dp"
         android:layout_height="44dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="192dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/eob2"
+        android:hint="ocena"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="138dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
+        android:layout_width="130dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
         android:text="KOLOKWIUM 1"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="118dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="130dp"
         android:layout_height="47dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginEnd="115dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="32dp"
         android:text="KOLOKWIUM 2"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="277dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

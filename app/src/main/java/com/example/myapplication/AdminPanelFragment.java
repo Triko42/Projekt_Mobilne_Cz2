@@ -95,6 +95,7 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
             clearEditTexts();
             showSuccessMessage();
             dbStudent.deletePr(String.valueOf(selectedId));
+            dbStudent.deleteMark(String.valueOf(selectedId));
         } else {
             showError("Nie udało się usunąć wybranych danych.");
         }
