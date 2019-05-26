@@ -68,7 +68,11 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
         String imie = nameEditText.getText().toString();
         String nazwisko = surnameEditText.getText().toString();
         if (!TextUtils.isEmpty(imie.trim()) && !TextUtils.isEmpty(nazwisko.trim())) {
-            if (dbStudent.addStudent(imie.trim(), nazwisko.trim())) {
+            long stud_id = dbStudent.addStudent(imie.trim(), nazwisko.trim());
+
+            if (stud_id != -1) {
+                dbStudent.addPresRec(stud_id, "Java",imie.trim(),nazwisko.trim());
+
                 clearEditTexts();
                 showSuccessMessage();
             } else {
@@ -113,18 +117,27 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
     private void populateListView(View view) {
         dbStudent = new STUstudent(view.getContext());
         dbStudent.open();
+
         scAdapter = new SimpleCursorAdapter(
-                view.getContext(), R.layout.studenci, null,
-                new String[]{STUhelper.STU_ID,
-                        STUhelper.STU_IMIE, STUhelper.STU_NAZWISKO},
-                new int[]{R.id.IDstu, R.id.IMIEstu, R.id.NAZWstu}, 0);
+                view.getContext(),
+                R.layout.studenci,
+                null,
+                new String[]{
+                        //STUhelper.STU_ID,
+                        STUhelper.STU_IMIE,
+                        STUhelper.STU_NAZWISKO},
+                new int[]{
+                       // R.id.IDstu,
+                        R.id.IMIEpre,
+                        R.id.NAZWpre
+                }, 0);
         studentsListView.setAdapter(scAdapter);
         getLoaderManager().initLoader(1, null, this);
         studentsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TextView nameTextView = view.findViewById(R.id.IMIEstu);
-                TextView surnameTextView = view.findViewById(R.id.NAZWstu);
+                TextView nameTextView = view.findViewById(R.id.IMIEpre);
+                TextView surnameTextView = view.findViewById(R.id.NAZWpre);
                 String name = nameTextView.getText().toString();
                 String surname = surnameTextView.getText().toString();
 

@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="38dp"
         android:text="IDstu"
-        app:layout_constraintEnd_toStartOf="@+id/IMIEstu"
+        app:layout_constraintEnd_toStartOf="@+id/IMIEpre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,6 +37,6 @@
         android:layout_marginEnd="90dp"
         android:text="NAZWstu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/IMIEstu"
+        app:layout_constraintStart_toEndOf="@+id/IMIEpre"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

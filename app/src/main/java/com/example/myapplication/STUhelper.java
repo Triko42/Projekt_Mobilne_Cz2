@@ -10,9 +10,10 @@ public class STUhelper extends SQLiteOpenHelper {
     static String STU_ID="_id";
     static String STU_IMIE="imie";
     static String STU_NAZWISKO="nazwisko";
+    static String STU_PRZEDMIOT="przedmiot";
 
     private static String DB_NAZWA="STUDENCI.db";
-    private static String CREATE_TABLE_STUDENT="CREATE TABLE "+TABLE_TYP+"("+ STU_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+ STU_IMIE+" TEXT,"+STU_NAZWISKO+" TEXT"+")";
+    private static String CREATE_TABLE_STUDENT="CREATE TABLE IF NOT EXISTS "+TABLE_TYP+"("+ STU_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+ STU_IMIE+" TEXT,"+STU_NAZWISKO+" TEXT"+")";
     private static int DB_WERSJA=1;
 
     public STUhelper(Context context) {

@@ -31,7 +31,7 @@ public class TestFragment extends Fragment {
                     Toast.makeText(getContext(), "KLIKŁEM3", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("key","Programowanie w języku Java");
+                    bundle.putString("key","Java");
 
                     TestFragment3 testFragment3 = new TestFragment3();
                     testFragment3.setArguments(bundle);

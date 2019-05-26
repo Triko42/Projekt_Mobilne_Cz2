@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 this, R.layout.studenci, null,
                 new String[]{STUhelper.STU_ID,
                         STUhelper.STU_IMIE, STUhelper.STU_NAZWISKO},
-                new int[]{R.id.IDstu, R.id.IMIEstu, R.id.NAZWstu}, 0);
+                new int[]{R.id.IDstu, R.id.IMIEpre, R.id.NAZWpre}, 0);
         ((ListView)findViewById(R.id.lista1)).setAdapter(
                 scAdapter);
         getSupportLoaderManager().initLoader(1, null, this);

@@ -14,12 +14,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="38dp"
         android:text="IDstu"
-        app:layout_constraintEnd_toStartOf="@+id/IMIEstu"
+        app:layout_constraintEnd_toStartOf="@+id/IMIEpre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/IMIEstu"
+        android:id="@+id/IMIEpre"
         android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/NAZWstu"
+        android:id="@+id/NAZWpre"
         android:layout_width="79dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
@@ -37,6 +37,6 @@
         android:layout_marginEnd="90dp"
         android:text="NAZWstu"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/IMIEstu"
+        app:layout_constraintStart_toEndOf="@+id/IMIEpre"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
