@@ -28,10 +28,76 @@ public class TestFragment extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
                 if (fragmentManager!=null) {
-                    Toast.makeText(getContext(), "KLIKŁEM3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Java", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle = new Bundle();
                     bundle.putString("key","Java");
+
+
+                    TestFragment3 testFragment3 = new TestFragment3();
+                    testFragment3.setArguments(bundle);
+
+                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                }
+
+            }
+
+        });
+
+        Button button_changelist3 = view.findViewById(R.id.button2);
+        button_changelist3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                if (fragmentManager!=null) {
+                    Toast.makeText(getContext(), "CAD", Toast.LENGTH_SHORT).show();
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("key","CAD");
+
+
+                    TestFragment3 testFragment3 = new TestFragment3();
+                    testFragment3.setArguments(bundle);
+
+                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                }
+
+            }
+
+        });
+
+        Button button_changelist4 = view.findViewById(R.id.button3);
+        button_changelist4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                if (fragmentManager!=null) {
+                    Toast.makeText(getContext(), "Sieci komputerowe", Toast.LENGTH_SHORT).show();
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("key","Sieci komputerowe");
+
+
+                    TestFragment3 testFragment3 = new TestFragment3();
+                    testFragment3.setArguments(bundle);
+
+                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                }
+
+            }
+
+        });
+
+        Button button_changelist5 = view.findViewById(R.id.button4);
+        button_changelist5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getFragmentManager();
+                if (fragmentManager!=null) {
+                    Toast.makeText(getContext(), "Bazy danych", Toast.LENGTH_SHORT).show();
+
+                    Bundle bundle = new Bundle();
+                    bundle.putString("key","Bazy danych");
 
 
                     TestFragment3 testFragment3 = new TestFragment3();
