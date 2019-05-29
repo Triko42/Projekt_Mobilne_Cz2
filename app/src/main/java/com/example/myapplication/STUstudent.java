@@ -82,14 +82,14 @@ public class STUstudent {
         String[] whereArgs = new String[] {
                 subject,
         };
-        return dbStudent.query(PREhelper.TABLE_TYP, Presistance_RECORS, PREhelper.PRE_SUBJECT + " = ?", whereArgs, null, null, null);
+        return dbStudent.query(PREhelper.TABLE_TYP, Presistance_RECORS, PREhelper.PRE_SUBJECT + " = ?", whereArgs, null, null,STUhelper.STU_NAZWISKO + " ASC");
 
     }
     public Cursor getPresById(long id) {
         String[] whereArgs = new String[] {
                 String.valueOf(id),
         };
-        return dbStudent.query(PREhelper.TABLE_TYP, Presistance_RECORS, PREhelper.PRE_ID + " = ?", whereArgs, null, null, null);
+        return dbStudent.query(PREhelper.TABLE_TYP, Presistance_RECORS, PREhelper.PRE_ID + " = ?", whereArgs, null, null,STUhelper.STU_NAZWISKO + " ASC");
     }
 
     public int updatePres(long id, String[] args){
@@ -129,14 +129,14 @@ public class STUstudent {
         String[] whereArgs = new String[] {
                 subject,
         };
-        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_SUBJECT + " = ?", whereArgs, null, null, null);
+        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_SUBJECT + " = ?", whereArgs, null, null,STUhelper.STU_NAZWISKO + " ASC");
 
     }
     public Cursor getMarksById(long id) {
         String[] whereArgs = new String[] {
                 String.valueOf(id),
         };
-        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_ID + " = ?", whereArgs, null, null, null);
+        return dbStudent.query(MARhelper.TABLE_TYP, Mark_RECORS, MARhelper.MAR_ID + " = ?", whereArgs, null, null,STUhelper.STU_NAZWISKO + " ASC");
     }
 
 

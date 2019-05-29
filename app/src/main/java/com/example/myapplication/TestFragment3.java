@@ -45,7 +45,7 @@ public class TestFragment3 extends Fragment {
                     EditMarks editMarks = new EditMarks();
                     editMarks.setArguments(bundle1);
 
-                    Nawigator.navigateTo(fragmentManager, editMarks);
+                    Navigator.navigateTo(fragmentManager, editMarks);
                 }
             }
 
@@ -67,7 +67,7 @@ public class TestFragment3 extends Fragment {
                     Presistance presistance = new Presistance();
                     presistance.setArguments(bundle1);
 
-                    Nawigator.navigateTo(fragmentManager, presistance);
+                    Navigator.navigateTo(fragmentManager, presistance);
                 }
             }
 
@@ -88,13 +88,10 @@ public class TestFragment3 extends Fragment {
                     Marks marks = new Marks();
                     marks.setArguments(bundle1);
 
-                    Nawigator.navigateTo(fragmentManager, marks);
+                    Navigator.navigateTo(fragmentManager, marks);
                 }
             }
 
         });
     }
-
-
 }
-

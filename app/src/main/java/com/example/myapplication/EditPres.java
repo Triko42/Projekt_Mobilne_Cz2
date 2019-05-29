@@ -98,8 +98,9 @@ public class EditPres extends Fragment implements LoaderManager.LoaderCallbacks<
 
         Presistance edit = new Presistance();
         edit.setArguments(bundle1);
-        dbStudent.close();
-        Nawigator.navigateTo(fragmentManager, edit);
+//        dbStudent.close();
+//        Navigator.navigateTo(fragmentManager, edit);
+        Navigator.popBackStack(getFragmentManager());
         //refreshList();
     }
 

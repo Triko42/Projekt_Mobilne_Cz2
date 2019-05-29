@@ -27,17 +27,17 @@ public class TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager!=null) {
+                if (fragmentManager != null) {
                     Toast.makeText(getContext(), "Java", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("key","Java");
+                    bundle.putString("key", "Java");
 
 
                     TestFragment3 testFragment3 = new TestFragment3();
                     testFragment3.setArguments(bundle);
 
-                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                    Navigator.navigateTo(fragmentManager, testFragment3);
                 }
 
             }
@@ -49,17 +49,17 @@ public class TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager!=null) {
+                if (fragmentManager != null) {
                     Toast.makeText(getContext(), "CAD", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("key","CAD");
+                    bundle.putString("key", "CAD");
 
 
                     TestFragment3 testFragment3 = new TestFragment3();
                     testFragment3.setArguments(bundle);
 
-                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                    Navigator.navigateTo(fragmentManager, testFragment3);
                 }
 
             }
@@ -71,17 +71,17 @@ public class TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager!=null) {
+                if (fragmentManager != null) {
                     Toast.makeText(getContext(), "Sieci komputerowe", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("key","Sieci komputerowe");
+                    bundle.putString("key", "Sieci komputerowe");
 
 
                     TestFragment3 testFragment3 = new TestFragment3();
                     testFragment3.setArguments(bundle);
 
-                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                    Navigator.navigateTo(fragmentManager, testFragment3);
                 }
 
             }
@@ -93,17 +93,17 @@ public class TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager!=null) {
+                if (fragmentManager != null) {
                     Toast.makeText(getContext(), "Bazy danych", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("key","Bazy danych");
+                    bundle.putString("key", "Bazy danych");
 
 
                     TestFragment3 testFragment3 = new TestFragment3();
                     testFragment3.setArguments(bundle);
 
-                    Nawigator.navigateTo(fragmentManager, testFragment3);
+                    Navigator.navigateTo(fragmentManager, testFragment3);
                 }
 
             }
@@ -115,9 +115,9 @@ public class TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
-                if (fragmentManager!=null) {
+                if (fragmentManager != null) {
                     Toast.makeText(getContext(), "KLIKŁEM", Toast.LENGTH_SHORT).show();
-                    Nawigator.navigateTo(fragmentManager, new AdminPanelFragment());
+                    Navigator.navigateTo(fragmentManager, new LoginClass());//, false);
                 }
 
             }

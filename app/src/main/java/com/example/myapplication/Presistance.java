@@ -85,8 +85,8 @@ public class Presistance extends Fragment implements LoaderManager.LoaderCallbac
 
                 EditPres edit = new EditPres();
                 edit.setArguments(bundle1);
-                dbStudent.close();
-                Nawigator.navigateTo(fragmentManager, edit);
+//                dbStudent.close();
+                Navigator.navigateTo(fragmentManager, edit);
             }
         });
         refreshList();

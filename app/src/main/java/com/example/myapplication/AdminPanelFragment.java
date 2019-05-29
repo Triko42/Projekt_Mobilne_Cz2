@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -31,6 +32,8 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
 
     private int selectedId = 0;
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,7 +64,11 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
         });
 
         populateListView(view);
+
+
     }
+
+
 
     private void onAddButtonClicked() {
         ExtensionUtils.hideKeyboard(getActivity());

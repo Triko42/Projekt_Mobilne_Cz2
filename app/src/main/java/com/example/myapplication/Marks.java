@@ -80,8 +80,8 @@ public class Marks extends Fragment implements LoaderManager.LoaderCallbacks<Cur
 
                 EditMarks edit = new EditMarks();
                 edit.setArguments(bundle1);
-                dbStudent.close();
-                Nawigator.navigateTo(fragmentManager, edit);
+//                dbStudent.close();
+                Navigator.navigateTo(fragmentManager, edit);
             }
         });
         refreshList();
