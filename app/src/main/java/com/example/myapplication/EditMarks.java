@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -92,6 +93,7 @@ public class EditMarks extends Fragment implements LoaderManager.LoaderCallbacks
 //        dbStudent.close();
 //        Navigator.navigateTo(fragmentManager, edit);
         Navigator.popBackStack(getFragmentManager());
+        Toast.makeText(getContext(), "Oceny studenta zaktualizowane", Toast.LENGTH_SHORT).show();
     }
 
     @NonNull

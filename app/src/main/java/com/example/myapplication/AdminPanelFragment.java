@@ -123,7 +123,7 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
     }
 
     private void showSuccessMessage() {
-        Toast.makeText(this.getContext(), "Wszystko gitez", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getContext(), "Dodano studenta", Toast.LENGTH_SHORT).show();
     }
 
     private void showError(String message) {

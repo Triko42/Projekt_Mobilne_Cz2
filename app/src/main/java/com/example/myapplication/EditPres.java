@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditPres extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
     private STUstudent dbStudent;
@@ -102,6 +103,7 @@ public class EditPres extends Fragment implements LoaderManager.LoaderCallbacks<
 //        Navigator.navigateTo(fragmentManager, edit);
         Navigator.popBackStack(getFragmentManager());
         //refreshList();
+        Toast.makeText(getContext(), "Obecność studenta zaktualizowane", Toast.LENGTH_SHORT).show();
     }
 
    // private void refreshList() {

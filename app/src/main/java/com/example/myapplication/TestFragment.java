@@ -116,7 +116,7 @@ public class TestFragment extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
                 if (fragmentManager != null) {
-                    Toast.makeText(getContext(), "KLIKŁEM", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Zaloguj się, aby kontynuować", Toast.LENGTH_SHORT).show();
                     Navigator.navigateTo(fragmentManager, new LoginClass());//, false);
                 }
 

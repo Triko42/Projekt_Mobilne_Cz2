@@ -58,7 +58,7 @@ public class TestFragment3 extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
                 if (fragmentManager!=null) {
-                    Toast.makeText(getContext(), "KLIKŁEM", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Obecność", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle1 = new Bundle();
 
@@ -79,7 +79,7 @@ public class TestFragment3 extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
                 if (fragmentManager!=null) {
-                    Toast.makeText(getContext(), "KLIKŁEM6", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Oceny", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle1 = new Bundle();
 
