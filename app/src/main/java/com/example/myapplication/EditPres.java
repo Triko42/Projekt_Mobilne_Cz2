@@ -15,6 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * The type Edit pres.
+ */
 public class EditPres extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
     private STUstudent dbStudent;
     private long id;

@@ -16,6 +16,9 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+/**
+ * The type Presistance.
+ */
 public class Presistance extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
 
     private ListView presListView;
@@ -23,12 +26,24 @@ public class Presistance extends Fragment implements LoaderManager.LoaderCallbac
     private STUstudent dbStudent;
     private String subject;
 
+    /**
+     * onCreateView override, nullable
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.presistance, container, false);
     }
 
+    /**
+     * onViewCreated override
+     * @param view
+     * @param savedInstanceState
+     */
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -44,6 +59,10 @@ public class Presistance extends Fragment implements LoaderManager.LoaderCallbac
         populateListView(view);
     }
 
+    /**
+     * populateListView
+     * @param view
+     */
     private void populateListView(View view) {
         dbStudent = new STUstudent(view.getContext());
         dbStudent.open();

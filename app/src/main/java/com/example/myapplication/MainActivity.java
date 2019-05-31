@@ -3,6 +3,9 @@ package com.example.myapplication;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (Navigator.currentScreen().equals(AdminPanelFragment.class.getSimpleName())) {
+        if (Navigator.currentScreen().equals(AdminPanel.class.getSimpleName())) {
             Navigator.popBackStack(getSupportFragmentManager());
         }
         if (getSupportFragmentManager().getBackStackEntryCount() >= 1) {

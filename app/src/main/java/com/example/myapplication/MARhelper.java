@@ -4,16 +4,46 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/**
+ * The type MARhelper.
+ */
 public class MARhelper extends SQLiteOpenHelper {
 
+    /**
+     * The Table typ.
+     */
     static String TABLE_TYP="Oceny";
+    /**
+     * The Mar id.
+     */
     static String MAR_ID="_id";
+    /**
+     * The Mar stu id.
+     */
     static String MAR_STU_ID="stu_id";
+    /**
+     * The Mar im.
+     */
     static String MAR_IM="imie";
+    /**
+     * The Mar nazw.
+     */
     static String MAR_NAZW="nazwisko";
+    /**
+     * The Mar subject.
+     */
     static String MAR_SUBJECT="subject";
+    /**
+     * The Mar k 1.
+     */
     static String MAR_K1="k1";
+    /**
+     * The Mar k 2.
+     */
     static String MAR_K2="k2";
+    /**
+     * The Mar egz.
+     */
     static String MAR_EGZ="egz";
 
     private static String DB_NAZWA="OCENY.db";
@@ -29,6 +59,10 @@ public class MARhelper extends SQLiteOpenHelper {
 
     private static int DB_WERSJA=1;
 
+    /**
+     * Instantiates a new MARhelper.
+     * @param context the context
+     */
     public MARhelper(Context context) {
         super(context, DB_NAZWA, null, DB_WERSJA);
     }

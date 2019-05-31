@@ -5,15 +5,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+/**
+ * The type Login class.
+ */
 public class LoginClass extends Fragment {
 
     private EditText Name;
@@ -55,7 +56,7 @@ public class LoginClass extends Fragment {
         if((UserName.equals("Admin"))&&(UserPassword.equals("1234")))
         {
             FragmentManager fragmentManager = getFragmentManager();
-            AdminPanelFragment edit = new AdminPanelFragment();
+            AdminPanel edit = new AdminPanel();
             Navigator.navigateTo(fragmentManager, edit);
         }
         else

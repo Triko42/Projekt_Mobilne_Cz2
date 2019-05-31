@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -20,7 +19,10 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AdminPanelFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
+/**
+ * The type Admin Panel.
+ */
+public class AdminPanel extends Fragment implements LoaderManager.LoaderCallbacks<Cursor> {
     private EditText nameEditText;
     private EditText surnameEditText;
     private Button addButton;
@@ -64,11 +66,7 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
         });
 
         populateListView(view);
-
-
     }
-
-
 
     private void onAddButtonClicked() {
         ExtensionUtils.hideKeyboard(getActivity());
@@ -140,8 +138,8 @@ public class AdminPanelFragment extends Fragment implements LoaderManager.Loader
                 null,
                 new String[]{
                         STUhelper.STU_ID,
-                        STUhelper.STU_IMIE,
-                        STUhelper.STU_NAZWISKO},
+                        STUhelper.STU_NAME,
+                        STUhelper.STU_LAST_NAME},
                 new int[]{
                         R.id.IDstu,
                         R.id.IMIEpre,

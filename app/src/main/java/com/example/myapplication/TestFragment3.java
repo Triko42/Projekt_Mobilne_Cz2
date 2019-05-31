@@ -12,6 +12,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ * The type Test fragment 3.
+ */
 public class TestFragment3 extends Fragment {
     @Nullable
     @Override
@@ -36,7 +39,7 @@ public class TestFragment3 extends Fragment {
             public void onClick(View v) {
                 FragmentManager fragmentManager = getFragmentManager();
                 if (fragmentManager!=null) {
-                    Toast.makeText(getContext(), "KLIKŁEM3", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "klik", Toast.LENGTH_SHORT).show();
 
                     Bundle bundle1 = new Bundle();
 

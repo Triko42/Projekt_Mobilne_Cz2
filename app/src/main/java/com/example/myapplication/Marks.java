@@ -16,6 +16,9 @@ import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
+/**
+ * The type Marks.
+ */
 public class Marks extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>{
 
 

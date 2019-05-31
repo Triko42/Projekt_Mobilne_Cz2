@@ -11,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * The type Test fragment.
+ */
 public class TestFragment extends Fragment {
     @Nullable
     @Override
